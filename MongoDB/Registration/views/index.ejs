@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new project</title>
+</head>
+<body>
+	<style>
+		body {background-color: rgb(206, 228, 204);}
+		h3 {color: rgb(8, 8, 49);}
+		p {color: red;}
+		
+	</style>
+	<h3>Registration</h3>
+	<fieldset>
+		<table>
+			<form action="/" method="POST">
+				<input type="text" name="first_name" placeholder="Your First Name">
+				<div></div>
+				<input type="text" name="last_name" placeholder="Your Last Name">
+				<div></div>
+				<input type="text" name="username" placeholder="Your username">
+				<div></div>
+				<input type="text" name="email" placeholder="Your email">
+				<div></div>
+				<input type="text" name="age" placeholder="Your Age">
+				<div></div>
+				<input type="text" name="password" placeholder="Your password">
+				<div></div>
+				<input type="text" name="confirm-password" placeholder="Your password">
+				<div></div>
+				<input type="submit" value="Submit">
+			</form>
+		</table>
+	</fieldset>
+
+	<fieldset>
+		<h3>Login</h3	
+		<table>
+			<form action="/main" method="POST">
+				<input type="text" name="username" placeholder="Your username">
+				<div></div>
+				<input type="text" name="password" placeholder="Your password">
+				<div></div>
+				<input type="submit" value="Submit">
+			</form>
+		</table>
+	</fieldset>	
+
+	<fieldset>
+		<label></label>
+		<% if(typeof(errors) != 'undefined' ) { %>
+			<% for (var x in errors) { %>
+			<h3><%= errors[x].message %></h3>
+			<% } %>
+		<% } %>
+		<a href="/main"><button class="btn btn-default">Go to next page</button></a>
+	</fieldset>
+
+</body>
+</html>

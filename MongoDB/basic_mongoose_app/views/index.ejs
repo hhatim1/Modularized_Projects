@@ -1,0 +1,36 @@
+<!DOCTYPE!>
+<html>
+
+<head>
+	<title>mongoose-app</title>
+</head>
+<body>
+
+<style>
+	body {background-color: powderblue;}
+	h1   {color: blue;}
+	p    {color: red;}
+	submit bottom: {border-width: 5px;}
+</style>
+
+	<h1>Your Mongoose App</h1>
+
+	<fieldset>
+		<table>
+	    <form action="/users" method="POST">
+	        <input type="text" name="name" placeholder="Your First and Last Name">
+	        <div></div>
+	        <input type="text" name="age" placeholder="Your Age">
+	        <div></div>
+	        <input type="submit" value="Submit">
+	    </form>
+	    </table>
+	</fieldset>
+	<% if(typeof(errors) != 'undefined' ) { %>
+     <% for (var x in errors) { %>
+      <h3><%= errors[x].message %></h3>
+     <% } %>
+ 	<% } %>
+ 	
+</body>
+</html>

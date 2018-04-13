@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>new project</title>
+</head>
+<body>
+	<style>
+		body {background-color: rgb(173, 185, 172);}
+		h3 {color: rgb(8, 8, 49);}
+		h2 {color: rgb(31, 8, 49);}
+		h1 {color: rgb(9, 9, 126);}
+		p {color: rgb(26, 23, 23);}	
+	</style>
+		<a href="/"><button class="btn btn-default">Go Back</button></a>
+
+		<h3>List of Users</h3>
+		
+	<fieldset><label>users</label>
+		<%	for (users in User) { %>
+			<p>First Name: <%= User.first_name %></p>
+			<p>Last Name: <%= User.last_name %></p>
+			<p>email: <%= User.email %></p>
+			<p> --------------------------- </p>	
+		<% } %>
+	</fieldset>	
+
+	<fieldset>
+	<h2>Here are the names!</h2>
+		<% for (var i in users) { %>
+			<p>First Name:<%= users[i].first_name %></p>
+			<p>Last Name:<%= users[i].last_name %></p>
+			<p>Email: <%= users[i].email %></p>
+			<hr>
+		<% } %>
+			<p>-  -  -  -  -  -  -  -  -  -  - </p>
+	</fieldset>
+	
+</body>
+</html>
+
